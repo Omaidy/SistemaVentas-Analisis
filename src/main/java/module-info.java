@@ -8,9 +8,9 @@ module pe.edu.utp.analisis {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.desktop;
 
     opens pe.edu.utp.analisis to javafx.fxml;
     exports pe.edu.utp.analisis;
