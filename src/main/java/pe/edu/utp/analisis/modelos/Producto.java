@@ -1,6 +1,7 @@
 package pe.edu.utp.analisis.modelos;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Producto {
     private int id;
@@ -77,5 +78,18 @@ public class Producto {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    // Sobrescribir equals y hashCode para que el Map funcione correctamente
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return id == producto.id;  // Comparamos solo por ID, ya que el ID es único
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);  // Usamos el ID para calcular el hash
     }
 }

@@ -8,7 +8,10 @@ public interface ProductoDAO {
     void insertarProducto(Producto producto);
     List<Producto> obtenerTodosProductos();
     Producto obtenerProducto(String nombre, String talla);
+    List<String>obtenerTallas(String nombre);
     void actualizarStock(int id, int nuevoStock);
     void eliminarProducto(int id);
     Producto obtenerProductoPorId(int id);
+    int obtenerIDporNombreYTalla(String nombre, String talla);
+    double obtenerPrecioPorTalla (String nombre, String talla);
 }

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.utp.analisis.controller.EmpleadoController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="701.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../icons/fondomenu.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="731.0" prefWidth="1200.0">
+         <children>
+            <BorderPane layoutX="200.0" layoutY="57.0" prefHeight="722.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="525.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btn_ventas" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#mostrarVentas" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #ec9945;" text="Nueva Venta" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8-clientes-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_clientes" layoutX="15.0" layoutY="115.0" mnemonicParsing="false" onAction="#mostrarClientes" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #ec9945;" text="Clientes" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8-empleado-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="15.0" layoutY="330.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #ec9945;" text="Ventas" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8-ventas-30 (1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="15.0" layoutY="437.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #ec9945;" text="Cerrar Sesion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8-cerrar-sesión-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #ec9945;" text="Productos" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8-empleado-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="157.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="157.0" fitWidth="173.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="1152.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-cerrar-ventana-32.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="1112.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-menos-32.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="301.0" layoutY="80.0" text="Bienvenido">
+                           <font>
+                              <Font name="Eras Bold ITC" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="478.0" layoutY="80.0" text="trabajador">
+                           <font>
+                              <Font name="Eras Bold ITC" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="541.0" prefWidth="988.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="JP_clientes" layoutX="15.0" prefHeight="520.0" prefWidth="969.0" style="-fx-background-color: #ffffff;" visible="false">
+                           <children>
+                              <Label layoutX="392.0" layoutY="21.0" text="Registro de Clientes ">
+                                 <font>
+                                    <Font name="Eras Bold ITC" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="63.0" text="Datos del Cliente ">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Nombres:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="410.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="DNI:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="219.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Apellidos:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="600.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Telefono:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="35.0" layoutY="132.0" />
+                              <TextField layoutX="219.0" layoutY="134.0" />
+                              <TextField layoutX="410.0" layoutY="132.0" />
+                              <TextField layoutX="600.0" layoutY="132.0" />
+                              <Label layoutX="559.0" layoutY="186.0" prefHeight="20.0" prefWidth="67.0" text="Tipo:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="301.0" layoutY="186.0" prefHeight="20.0" prefWidth="67.0" text="Correo:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="186.0" prefHeight="20.0" prefWidth="67.0" text="Direccion:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="559.0" layoutY="213.0" prefHeight="25.0" prefWidth="191.0" />
+                              <TextField layoutX="301.0" layoutY="213.0" prefHeight="25.0" prefWidth="230.0" />
+                              <TextField layoutX="35.0" layoutY="213.0" prefHeight="25.0" prefWidth="230.0" />
+                              <Button layoutX="860.0" layoutY="59.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="27.0">
+                                       <image>
+                                          <Image url="@../icons/boton-guardar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="860.0" layoutY="192.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8-eliminar-25.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="860.0" layoutY="125.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8-editar-25.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Line endX="793.0" layoutX="138.0" layoutY="271.0" startX="-100.0" />
+                              <Label layoutX="38.0" layoutY="292.0" prefHeight="20.0" prefWidth="209.0" text="Busqueda de Clientes por DNI:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="259.0" layoutY="290.0" prefHeight="25.0" prefWidth="267.0" promptText="Buscar" />
+                              <Button layoutX="552.0" layoutY="286.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="26.0">
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="28.0">
+                                       <image>
+                                          <Image url="@../icons/icons8-buscar-30 (1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField layoutX="796.0" layoutY="290.0" prefHeight="25.0" prefWidth="107.0" promptText="Id Empleado" />
+                              <TableView layoutX="42.0" layoutY="345.0" prefHeight="161.0" prefWidth="870.0">
+                                <columns>
+                                  <TableColumn prefWidth="118.0" text="DNI" />
+                                  <TableColumn prefWidth="126.0" text="Nombres" />
+                                    <TableColumn minWidth="0.0" prefWidth="109.0" text="Apellidos" />
+                                    <TableColumn prefWidth="123.0" text="Telefono" />
+                                    <TableColumn minWidth="0.0" prefWidth="132.0" text="Correo" />
+                                    <TableColumn minWidth="0.0" prefWidth="141.0" text="Direccion" />
+                                    <TableColumn minWidth="0.0" prefWidth="120.0" text="IP Empleado" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="JP_ventas" layoutX="15.0" prefHeight="520.0" prefWidth="969.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label layoutX="406.0" layoutY="20.0" text="Nueva Venta">
+                                 <font>
+                                    <Font name="Eras Bold ITC" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Codigo:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="410.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Cantidad:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="219.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Tallas:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="600.0" layoutY="98.0" prefHeight="20.0" prefWidth="67.0" text="Precio:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="codigo_producto" layoutX="31.0" layoutY="145.0" />
+                              <TextField fx:id="cantidad_producto" layoutX="410.0" layoutY="145.0" />
+                              <TextField fx:id="precio_producto" editable="false" layoutX="600.0" layoutY="145.0" />
+                              <Button fx:id="btn_agregar" layoutX="860.0" layoutY="59.0" mnemonicParsing="false" onAction="#agregarcarrito" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="27.0">
+                                       <image>
+                                          <Image url="@../icons/boton-guardar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="860.0" layoutY="192.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8-eliminar-25.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="860.0" layoutY="125.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8-editar-25.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Line endX="793.0" layoutX="138.0" layoutY="271.0" startX="-100.0" />
+                              <Label layoutX="38.0" layoutY="292.0" prefHeight="20.0" prefWidth="43.0" text="Venta">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="tallas_producto" layoutX="219.0" layoutY="145.0" onAction="#onTallaSeleccionada" prefWidth="150.0" promptText="Elige" />
+                              <TableView fx:id="carritoTableView" layoutX="38.0" layoutY="326.0" prefHeight="161.0" prefWidth="855.0">
+                                 <columns>
+                                    <TableColumn fx:id="nombreColumn" text="Nombre" />
+                                    <TableColumn fx:id="tallaColumn" text="Talla" />
+                                    <TableColumn fx:id="cantidadColumn" text="Cantidad" />
+                                 </columns>
+                              </TableView>
+                                 <Button fx:id="btn_buscar" layoutX="779.0" layoutY="136.0" mnemonicParsing="false" onAction="#buscarproducto" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: #ec9945;">
+                                    <graphic>
+                                       <ImageView fitHeight="28.0" fitWidth="27.0">
+                                          <image>
+                                             <Image url="@../icons/boton-guardar.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                              <Label fx:id="totalLabel" text="Total: S/ 0.00" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
+</AnchorPane>

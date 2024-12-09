@@ -121,6 +121,11 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>3.4.1</version> <!-- Usa la versión más reciente disponible -->
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version> <!-- Asegúrate de usar la versión más reciente -->
+        </dependency>
     </dependencies>
 
     <build>

@@ -7,8 +7,9 @@ public class Cliente {
     private int numero;
     private String correo;
     private String direccion;
-    private int idEmpleado;  // Nuevo atributo
+    private int idEmpleado;  // Quién registró al cliente
 
+    // Constructor
     public Cliente(int dni, String nombre, String apellidos, String correo, int numero, String direccion, int idEmpleado) {
         this.dni = dni;
         this.nombre = nombre;
@@ -16,10 +17,10 @@ public class Cliente {
         this.numero = numero;
         this.correo = correo;
         this.direccion = direccion;
-        this.idEmpleado = idEmpleado;  // Inicializar nuevo atributo
+        this.idEmpleado = idEmpleado;  // Guardamos quién registró al cliente
     }
 
-    // Getters y setters para todos los atributos
+    // Getters y setters
     public int getDni() {
         return dni;
     }

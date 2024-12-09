@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="420.0" prefWidth="665.0" style="-fx-background-color: #38b6ff;"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.utp.analisis.controller.InicioController">
+   <children>
+      <!-- Imagen de fondo -->
+      <ImageView fitHeight="420.0" fitWidth="665.0">
+         <image>
+            <Image url="@../icons/fondo.png" />
+         </image>
+      </ImageView>
+
+      <!-- Contenedor principal para el formulario de inicio de sesión -->
+      <AnchorPane layoutX="200.0" layoutY="32.0" prefHeight="357.0" prefWidth="265.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <!-- Imagen decorativa -->
+            <ImageView fitHeight="356.0" fitWidth="262.0" layoutX="2.0" layoutY="1.0">
+               <image>
+                  <Image url="@../icons/Captura de pantalla 2024-05-19 195912.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.6259542107582092" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+
+            <!-- Contenedor de campos de usuario -->
+            <AnchorPane layoutX="25.0" layoutY="88.0" prefHeight="237.0" prefWidth="216.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <!-- Botón para iniciar sesión -->
+                  <Button layoutX="15.0" layoutY="176.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="186.0"
+                          style="-fx-background-color: #ff8200;" text="Iniciar Sesión" textFill="WHITE"
+                          onMouseClicked="#handleIniciarSesion">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+
+                  <!-- Icono de usuario -->
+                  <ImageView fitHeight="25.0" fitWidth="33.0" layoutX="27.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-usuario-24.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Icono de contraseña -->
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="27.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-contraseña-24.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Campo de contraseña -->
+                  <PasswordField fx:id="txt_contraseña" layoutX="52.0" layoutY="119.0" prefHeight="26.0" prefWidth="128.0" promptText="Contraseña" />
+
+                  <!-- Campo de usuario -->
+                  <TextField fx:id="txt_usuario" layoutX="52.0" layoutY="62.0" prefHeight="26.0" prefWidth="128.0" promptText="Usuario" />
+
+                  <!-- Icono de ocultar -->
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="181.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-ocultar-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+
+            <!-- Icono decorativo en la parte superior -->
+            <ImageView fitHeight="149.0" fitWidth="244.0" layoutX="91.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/USUARIO.png" />
+               </image>
+            </ImageView>
+
+            <!-- Título principal -->
+            <Label layoutX="77.0" layoutY="14.0" text="Mi cuenta" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+
+      <!-- Botón para cerrar ventana -->
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="626.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true"
+                 onMouseClicked="#handleCerrarVentana">
+         <image>
+            <Image url="@../icons/icons8-cerrar-ventana-32.png" />
+         </image>
+      </ImageView>
+
+      <!-- Botón para minimizar la ventana -->
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="590.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true"
+                 onMouseClicked="#handleMinimizarVentana">
+         <image>
+            <Image url="@../icons/icons8-menos-32.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -18,6 +18,10 @@ public class ProductoDAOImpl implements ProductoDAO {
         this.conexion = conexion;
     }
 
+    public ProductoDAOImpl() {
+
+    }
+
 
     @Override
     public void insertarProducto(Producto producto) {
@@ -110,6 +114,48 @@ public class ProductoDAOImpl implements ProductoDAO {
     }
 
     @Override
+    public int obtenerIDporNombreYTalla(String nombre, String talla) {
+        int id = 0;
+        String query = "SELECT id FROM productos WHERE nombre = ? AND talla = ?";
+        try (Connection conn = conexion.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, nombre);
+            stmt.setString(2, talla);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    id = rs.getInt("id");  // Obtiene el precio según la talla
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
+    @Override
+    public double obtenerPrecioPorTalla(String nombre, String talla) {
+        double precio = 0.0;
+        String query = "SELECT precio FROM productos WHERE nombre = ? AND talla = ?";
+        try (Connection conn = conexion.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, nombre);
+            stmt.setString(2, talla);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    precio = rs.getDouble("precio");  // Obtiene el precio según la talla
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return precio;
+    }
+
+    @Override
     public Producto obtenerProducto(String nombre, String talla) {
         String query = "SELECT * FROM productos WHERE nombre = ? AND talla = ?";
         try (Connection conn = conexion.conectar();
@@ -132,5 +178,25 @@ public class ProductoDAOImpl implements ProductoDAO {
             e.printStackTrace();
         }
         return null; // Si no se encuentra el producto
+    }
+
+    @Override
+    public List<String> obtenerTallas(String nombre) {
+        List<String> tallas = new ArrayList<>();
+        String query = "SELECT DISTINCT talla FROM productos WHERE nombre = ?";
+        try (Connection conn = conexion.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, nombre);  // Establece el nombre del producto en la consulta
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    tallas.add(rs.getString("talla"));  // Agrega las tallas disponibles a la lista
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return tallas;
     }
 }

@@ -57,4 +57,11 @@ public interface EmpleadoDAO {
      *  El ID del ultimo  empleado .
      */
     int obtenerUltimoId();
+    /**
+     * Obtener el cargo (job title) de un empleado por su ID.
+     *
+     * @param id El ID del empleado.
+     * @return El cargo del empleado correspondiente al ID.
+     */
+    String obtenerCargoEmpleado(int id);
 }

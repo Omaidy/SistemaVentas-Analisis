@@ -1,7 +1,7 @@
-package pe.edu.utp.analisis.modelos;
+package pe.edu.utp.analisis.estructuras;
 
-import pe.edu.utp.analisis.dao.impl.ProductoDAOImpl;
 import pe.edu.utp.analisis.dao.ProductoDAO;
+import pe.edu.utp.analisis.modelos.Producto;
 
 import java.util.Stack;
 

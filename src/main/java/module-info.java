@@ -11,7 +11,11 @@ module pe.edu.utp.analisis {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
 
     opens pe.edu.utp.analisis to javafx.fxml;
     exports pe.edu.utp.analisis;
+    exports pe.edu.utp.analisis.controller;
+    opens pe.edu.utp.analisis.controller to javafx.fxml;
 }

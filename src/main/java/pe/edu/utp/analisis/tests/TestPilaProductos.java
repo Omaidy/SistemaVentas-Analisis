@@ -1,7 +1,8 @@
 package pe.edu.utp.analisis.tests;
 
 import pe.edu.utp.analisis.dao.impl.ProductoDAOImpl;
-import pe.edu.utp.analisis.modelos.PilaProductos;
+
+import pe.edu.utp.analisis.estructuras.PilaProductos;
 import pe.edu.utp.analisis.modelos.Producto;
 import pe.edu.utp.analisis.utilidades.ConexionSecu;
 
@@ -27,7 +28,7 @@ public class TestPilaProductos {
         // Ver el carrito
         carrito.verCarrito();
 
-  }
+  } 
 
 
 }
